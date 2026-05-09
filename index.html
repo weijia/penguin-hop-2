@@ -315,7 +315,7 @@
             height: 16,
             speed: 0,
             maxSpeed: 8,
-            minSpeed: 2,
+            minSpeed: 1,
             lane: 1,
             targetX: 128,
             jumping: false,
@@ -468,7 +468,7 @@
             time = 0;
             distance = 0;
             targetDistance = 1000;
-            gameSpeed = 3;
+            gameSpeed = 1.5;
             
             penguin = {
                 x: 128,
@@ -477,7 +477,7 @@
                 height: 16,
                 speed: 0,
                 maxSpeed: 8,
-                minSpeed: 2,
+                minSpeed: 1,
                 lane: 1,
                 targetX: 128,
                 jumping: false,
@@ -525,7 +525,7 @@
         }
 
         function spawnObstacle() {
-            if (Math.random() < 0.02 + stage * 0.005) {
+            if (Math.random() < 0.012 + stage * 0.004) {
                 const lane = Math.floor(Math.random() * 3);
                 const type = Math.random() < 0.7 ? 'hole' : 'seal';
                 obstacles.push({
